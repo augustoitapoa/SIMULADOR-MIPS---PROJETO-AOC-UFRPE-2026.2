@@ -1,7 +1,7 @@
 # decodificação das instruções MIPS em 32 bits (hexadecimal para assembly)
 
 
-class InstructionDecoder:
+class DecodificadorInstrucoes:
     # Funções para instruções tipo R opcode = 0x00
     R_FUNCT_MAP = {
         0x20: ("add", "R_3OP"),
