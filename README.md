@@ -2,7 +2,7 @@
 
 ## Como testar o funcionamento do código?
 
-Crie um arquivo `input.json` de exemplo com a configuração inicial:
+Crie um arquivo `input.json` de exemplo com a configuração inicial: ( deixamos um input pronto no repositório para facilitar )
 
 ```json
 {
