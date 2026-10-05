@@ -19,7 +19,7 @@ def executar_simulacao(arquivo_entrada: str, arquivo_saida: str, etapa: int):
     cpu = CPU(registradores, memoria)
 
     for texto_hex in instrucoes_hex:
-        instrucao = DecodificadorInstrucoes.decode(texto_hex)
+        instrucao = DecodificadorInstrucoes.decodificar(texto_hex)
 
         if etapa == 1:
             dados_saida.append({

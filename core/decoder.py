@@ -65,7 +65,7 @@ class DecodificadorInstrucoes:
         return val if val < 0x8000 else val - 0x10000
 
     @classmethod
-    def decode(cls, hex_str: str) -> dict:
+    def decodificar(cls, hex_str: str) -> dict:
         #decodificando a instrução em hexa na estrutura correta
         clean_hex = hex_str.strip()
         val = int(clean_hex, 16)
