@@ -1,19 +1,21 @@
-#ENTRADA E SAÍDA DO JSON
 import json
 
 class GerenciadorIO:
     @staticmethod
-    def carregar_entrada(caminho_arquivo: str) -> list:
+    def carregar_entrada(caminho_arquivo: str) -> tuple[list, dict]:
         with open(caminho_arquivo, "r", encoding="utf-8") as arquivo:
             dados = json.load(arquivo)
 
+        instrucoes = []
+        configuracao = {}
+
         if isinstance(dados, dict):
-            # formatado para leitura do código provido pela profa
-            return dados.get("text", [])
+            instrucoes = dados.get("text", [])
+            configuracao = dados.get("config", {})
         elif isinstance(dados, list):
-            # lista direta
-            return dados
-        return []
+            instrucoes = dados
+
+        return instrucoes, configuracao
 
     @staticmethod
     def salvar_saida(caminho_arquivo: str, dados: list):
