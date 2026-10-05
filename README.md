@@ -1,10 +1,10 @@
-Projeto Simulador MIPS AOC
+# Projeto Simulador MIPS AOC
 
-Como testar o funcionamento do código?
+## Como testar o funcionamento do código?
 
-Crie um arquivo input.json de exemplo com configuração inicial:
+Crie um arquivo `input.json` de exemplo com a configuração inicial:
 
-JSON
+```json
 {
   "config": {
     "regs": { "$1": 5 },
@@ -17,7 +17,10 @@ JSON
     "0x8C030064"
   ]
 }
+```
+
 Execute o comando para a Entrega 3:
 
-Bash
+```bash
 python main.py input.json output3.json --etapa 3
+```
